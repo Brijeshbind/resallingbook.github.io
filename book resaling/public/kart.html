@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart </title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="phone.css" >
+    
+</head>
+<body>
+    <div class="conatiner">
+        <ul class="navbaar">
+            <li id="logo"><img src="img/logo.jpg" alt=""></li>
+            <li id="search"><input type="search" placeholder="search "> </li>
+            <li id="home"><a href="home">Home</a></li>
+            <li id="login"><a href="sell">sell</a> </li>
+            <!-- <li id="sell"><a href="login.html">login now</a></li> -->
+            <li id="kart"><a href="kart"><img src="img/logo2.jpg" alt=""></a></li>
+            <li id="profile"><a href="login.html"><img src="img/dheeraj.jpg" alt=""> </a></li>
+        </ul>
+    </div>
+   
+    <h1>Shopping Cart</h1>
+
+	<!-- Product 1 -->
+	<h2>Product 1</h2>
+	<p>Price: $10.00</p>
+	<button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+
+	<!-- Product 2 -->
+	<h2>Product 2</h2>
+	<p>Price: $15.00</p>
+	<button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+
+	<!-- Cart Display -->
+	<h2>Cart</h2>
+	<div id="cartDisplay"></div>
+
+</body>
+<script src="kart.js"></script>
+</html>

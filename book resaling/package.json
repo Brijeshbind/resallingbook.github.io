@@ -1,0 +1,15 @@
+{
+  "name": "book-resaling",
+  "version": "1.0.0",
+  "description": "Book Reselling webside",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brijesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

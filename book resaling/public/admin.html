@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Admin Page</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Posts</a></li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <p>Welcome to the admin dashboard!</p>
+    </section>
+
+    <section id="posts">
+      <h2>Posts</h2>
+      <button id="add-post">Add Post</button>
+      <ul id="post-list"></ul>
+    </section>
+
+    <section id="users">
+      <h2>Users</h2>
+      <button id="add-user">Add User</button>
+      <ul id="user-list"></ul>
+    </section>
+
+    <section id="settings">
+      <h2>Settings</h2>
+      <p>Manage your site settings here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Admin Page</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const postList = document.getElementById('post-list');
+const userList = document.getElementById('user-list');
+const addPostBtn = document.getElementById('add-post');
+const addUserBtn = document.getElementById('add-user');
+
+// Add post event listener
+addPostBtn.addEventListener('click', () => {
+  const postTitle = prompt('Enter post title:');
+  const postContent = prompt('Enter post content:');
+  const newPost = document.createElement('li');
+  newPost.innerHTML = `<h3>${postTitle}</h3><p>${postContent}</p>`;
+  postList.appendChild(newPost);
+});
+
+// Add user event listener
+addUserBtn.addEventListener('click', () => {
+  const userName = prompt('Enter user name:');
+  const newUser = document.createElement('li');
+  newUser.innerText = userName;
+  userList.appendChild(newUser);
+});
+
+  </script>
+</body>
+</html>

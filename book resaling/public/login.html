@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+        background: url(img/books.jpg) no-repeat center/cover;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 350px;
+        height: 500px;
+        box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+        perspective: 1000px;
+    }
+
+    .inner-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    .front,
+    .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        border-style: cover;
+        background-image: linear-gradient(rgb(26 88 108 / 51%), rgb(19 17 47 / 48%)), url("img/book.jpg");
+        padding: 55px;
+        box-sizing: border-box;
+        backface-visibility: hidden;
+    }
+
+    .back {
+        transform: rotatey(180deg);
+    }
+
+    .card h2 {
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-box {
+        width: 100%;
+        background: transparent;
+        border: 1px sold #fff;
+        margin: 6px 0;
+        height: 32px;
+        border-radius: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        outline: none;
+        text-align: center;
+        color: #fff;
+    }
+
+    ::placeholder {
+        color: #fff;
+        font-style: 12px;
+    }
+
+    button {
+        width: 100%;
+        background: transparent;
+        border: 1px solid #fff;
+        margin: 35px 0 10px;
+        height: 32px;
+        font-size: 12px;
+        border-radius: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .sub-btn {
+        position: relative;
+    }
+
+    .sub-btn::after {
+        content: \27a4;
+        color: #333;
+        line-height: 32px;
+        font-size: 17px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        right: -1px;
+        top: -1px;
+    }
+
+    span {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .card a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+</style>
+
+<body>
+    <div class="conatiner">
+        <ul class="navbaar">
+            <li id="logo"><img src="img/logo.jpg" alt=""></li>
+            <li id="search"><input type="search"></li>
+            <li id="home"><a href="index.html">Home</a></li>
+            <li id="login"><a href="sell.html">sell</a> </li>
+            <li id="sell"><a href="#">login now</a></li>
+            <li id="kart"><a href="kart.html"><img src="img/logo2.jpg" alt=""></a></li>
+            <!-- <li id="profile"><a href=""><img src="img/dheeraj.jpg" alt=""></a></li> -->
+        </ul>
+    </div>
+
+    <div class="class-list">
+        <ul class="list">
+            <li class="item"><a href="">10th</a> </li>
+            <li class="item"><a href="">12th</a> </li>
+            <li class="item"><a href="">BA</a> </li>
+            <li class="item"><a href="">BBA</a> </li>
+            <li class="item"><a href="">BCA</a> </li>
+            <li class="item"><a href="">BSc</a> </li>
+            <li class="item"><a href="">B.Tech</a></li>
+            <li class="item"><a href="">HM</a> </li>
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box " id="card">
+                <div class="front">
+                    <h2>LOGIN</h2>
+                    <form id="login-form">
+                        <input type="email" id="username" name="username" class="input-box" placeholder="Enter email" required  >
+                        <input type="password" id="password" class="input-box" placeholder="password" name="password" required >
+                        <button type="submit"   class="sub-btn" >submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn1" onclick="openRegister()">I'm New Here</button>
+                    <a href="">Forgot Password</a>
+
+
+                </div>
+                <div class="back">
+                    <h2>REGISTER</h2>
+                    <form  id="register-form">
+                        <input type="text" id="name" class="input-box" placeholder="Your Name" required>
+                        <input type="email" id="username" class="input-box" placeholder="Enter email" required>
+                        <input type="password"  id="password" class="input-box" placeholder="password" required>
+                        <button type="submit" class="sub-btn">submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn1" onclick="openLogin()">I've an account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form from submitting
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Here, you would typically send a login request to a server-side application and wait for the response
+
+  // For this example, we will simulate a successful login by redirecting to a new page
+           
+  window.location.href = "index.html"; // Replace "profile.html" with the actual URL of your user profile page
+        });
+
+// for Register page
+const register = document.getElementById('register-form');
+
+register.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const name = document.getElementById('password').value;
+           
+  window.location.href = "index.html"; 
+        });
+
+
+
+        var card = document.getElementById("card");
+
+        function openRegister() {
+            card.style.transform = "rotatey(-180deg)";
+        }
+
+        function openLogin() {
+            card.style.transform = "rotatey(0deg)";
+        }
+
+    </script>
+
+    
+</body>
+<script src="index.js"></script>
+
+</html>

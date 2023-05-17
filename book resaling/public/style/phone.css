@@ -1,0 +1,139 @@
+body{
+
+}
+.container{
+   width: 100%;
+   padding: 10px;
+}
+
+.navbaar{
+    margin-left: 0px;
+    width:100vw;
+    margin: 0px;
+    display: flex;
+    background-color: brown;
+    
+}
+.navbaar li{
+    list-style: none;
+    margin: 0px;
+    margin-left: 0px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+}
+.navbaar li a{
+    text-decoration: none;
+    color: aliceblue;
+
+}
+.navbaar li #home  #login #sell a:hover{
+    padding: 2px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: black;
+}
+.navbaar #search{
+    width:auto;
+   
+    border-radius: 10px;
+}
+li#logo {
+    margin-left: -40px;
+}
+.navbaar #logo img{
+    height: 40px;
+    width: 40px;
+}
+.navbaar #kart img{
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+}
+.navbaar #profile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 360px;
+}
+.navbaar #sell{
+    float: right;
+    
+}
+
+
+
+
+/* list phase designing */
+.class-list{
+    margin: auto;
+    display: none;
+  
+}
+.list{
+    width: 100%;
+    background-color: blanchedalmond;
+    display: flex;
+    margin: 0px;
+
+}
+.list .item{
+    list-style: none;
+    margin: 10px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+.list .item a{
+    text-decoration: none;
+}
+.list .item a:hover{
+    color: blue;
+    border-radius: 5px;
+    padding: 4px;
+    background-color:white;
+    scale: 2;
+}
+
+/* login page */
+.login{
+    margin-top: 50px;
+    background-color: rgb(157, 255, 0);
+    text-align: center;
+    display: flow-root;
+    }
+
+
+    /* container1 section */
+    .container1 {
+        width: 380px;
+        padding: 10px;
+        background-color:white;
+    
+        
+        display: inline-grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(10px, auto);
+    }
+    .container1 .item1{
+        margin: 0;
+    
+        border-radius: 10px;
+        width: auto;
+        text-align: center;
+    }
+    .container1 .item1 h2,h3,p{
+       
+        
+    }
+
+    .container1 img {
+        align-content: center;
+        align-items: center;
+        margin: px;
+        height: 100px;
+        width: 100px;
+    }

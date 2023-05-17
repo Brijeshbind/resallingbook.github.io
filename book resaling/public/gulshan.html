@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gulshan</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="conatiner">
+        <ul class="navbaar">
+            <li id="logo"><img src="img/logo.jpg" alt=""></li>
+            <li id="search"><input type="search" placeholder="search any thing"> </li>
+            <li id="home"><a href="#">Home</a></li>
+            <li id="login"><a href="sell.html">sell</a> </li>
+            <li id="sell"><a href="login.html">login now</a></li>
+            <li id="kart"><a href="#"><img src="img/logo2.jpg" alt=""></a></li>
+            <li id="profile"><a href=""><img src="img/dheeraj.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="class-list">
+        <ul class="list">
+            <li class="item"><a href="">10th</a> </li>
+            <li class="item"><a href="">12th</a> </li>
+            <li class="item"><a href="">BA</a> </li>
+            <li class="item"><a href="">BBA</a> </li>
+            <li class="item"><a href="">BCA</a> </li>
+            <li class="item"><a href="">BSc</a> </li>
+            <li class="item"><a href="">B.Tech</a></li>
+            <li class="item"><a href="">HM</a> </li>
+
+        </ul>
+    </div>
+    <div class="container1">
+        <div class="item1"><img src="img/img1.jpg" alt="">
+            <h2>The Rise and Fall</h2>
+        </div>
+        <div class="item1"><img src="img/img2.jpg" alt="">
+            <h2>Consitutions of India</h2>
+        </div>
+        <div class="item1"><img src="img/img3.jpg" alt="">
+            <h2>Modern Physics </h2>
+        </div>
+        <div class="item1"><img src="img/img4.jpg" alt="">
+            <h2>Organic Chemistry </h2>
+        </div>
+        <div class="item1"><img src="img/img5.jpg" alt="">
+            <h2>Python program </h2>
+        </div>
+        <div class="item1"><img src="img/img6.jpg" alt="">
+            <h2>Core Java </h2>
+        </div>
+        <div class="item1"><img src="img/img7.jpg" alt="">
+            <h2>Let Us <b>C</b></h2>
+        </div>
+        <div class="item1"><img src="img/img8.jpg" alt="">
+            <h2>C++ </h2>
+        </div>
+        <div class="item1"><img src="img/img9.jpg" alt="">
+            <h2>Mathematics </h2>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script>
+
+    let a= document.getElementsByClassName('container1')[0];
+    a.innerHTML=a.innerHTML+' <div class="item1"><img src="img/img1.jpg" alt=""><h2>The Rise and Fall</h2></div>'
+
+    
+    let div= document.createElement('div')
+    div.innerHTML=div.innerHTML+'<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem aspernatur officiis</h1>'
+    a.prepend(div)
+</script>
+</html>
